@@ -1,0 +1,21 @@
+set nocompatible
+filetype plugin indent on
+syntax on
+set t_Co=256
+set nu
+set ruler
+set number
+set showmode
+set showtabline=2
+set hlsearch
+set incsearch
+set autoindent
+set smartindent
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+set linespace=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set wildmenu
+set equalalways
+set nobomb

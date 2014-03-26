@@ -1,0 +1,42 @@
+<VirtualHost *:80>
+  ServerName 127.0.0.1
+  ServerAlias default.vm
+  DocumentRoot <%= node[:twt_lamp][:docroot] %>
+  RewriteEngine On
+
+  <IfModule mod_php5.c>
+    <FilesMatch "\.ph(p3?|tml)$">
+      SetHandler application/x-httpd-php
+    </FilesMatch>
+    <IfModule mod_dir.c>
+      DirectoryIndex index.php index.html
+    </IfModule>
+  </IfModule>
+
+  <Directory <%= node[:twt_lamp][:docroot] %>>
+    Options FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+  <Directory />
+    Options FollowSymLinks
+    AllowOverride None
+  </Directory>
+
+  <Location /server-status>
+    SetHandler server-status
+
+    Order Allow,Deny
+    Allow from all
+  </Location>
+
+  LogLevel info
+  ErrorLog <%= node[:twt_lamp][:logdir] %>/error.log
+  CustomLog <%= node[:twt_lamp][:logdir] %>/access.log combined
+
+  RewriteEngine On
+  RewriteLog <%= node[:twt_lamp][:logdir] %>/rewrite.log
+  RewriteLogLevel 0
+</VirtualHost>

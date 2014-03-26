@@ -1,0 +1,22 @@
+[core]
+	editor = vim
+	pager = less -r
+	quotepath = false
+	filemode = false
+[alias]
+	co = checkout
+	st = status -s
+	last = log --pretty=oneline -1 HEAD
+	glog = log --graph --date=short --pretty=tformat:'%ad %h %s'
+	unstage = reset HEAD
+	mg = merge
+	ci = commit
+	br = branch
+	ls = ls-files
+	plog = log -p
+	pl = pull
+	ps = push
+  fe = fetch
+	df = diff
+[color]
+	ui = true

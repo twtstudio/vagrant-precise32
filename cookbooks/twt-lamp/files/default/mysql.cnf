@@ -1,0 +1,10 @@
+; !! Don't modify this file.
+; To change mysql configuration, modify `/vagrant/configurations/my.cnf` plz.
+
+[client]
+default-character-set=utf8
+
+[mysqld]
+bind-address = 0.0.0.0
+collation-server = utf8_unicode_ci
+character-set-server = utf8

@@ -1,0 +1,6 @@
+.DS_Store
+.vagrant
+/configurations/
+/logs/
+/sites/
+*.swp
