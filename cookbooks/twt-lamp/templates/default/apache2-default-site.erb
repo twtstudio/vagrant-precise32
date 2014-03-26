@@ -1,6 +1,5 @@
 <VirtualHost *:80>
-  ServerName 127.0.0.1
-  ServerAlias default.vm
+  ServerName default.vm
   DocumentRoot <%= node[:twt_lamp][:docroot] %>
   RewriteEngine On
 
@@ -33,10 +32,10 @@
   </Location>
 
   LogLevel info
-  ErrorLog <%= node[:twt_lamp][:logdir] %>/error.log
-  CustomLog <%= node[:twt_lamp][:logdir] %>/access.log combined
+  ErrorLog <%= node[:twt_lamp][:logdir] %>/default.vm-error.log
+  CustomLog <%= node[:twt_lamp][:logdir] %>/default.vm-access.log combined
 
   RewriteEngine On
-  RewriteLog <%= node[:twt_lamp][:logdir] %>/rewrite.log
+  RewriteLog <%= node[:twt_lamp][:logdir] %>/default.vm-rewrite.log
   RewriteLogLevel 0
 </VirtualHost>
