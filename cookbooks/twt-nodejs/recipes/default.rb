@@ -13,7 +13,7 @@ end
 
 apt_package "nodejs"
 
-%w{grunt-cli bower component less coffee-script}.each do |pkg|
+%w{grunt-cli bower less coffee-script}.each do |pkg|
   execute "Install #{pkg}" do
     command "npm ls -g #{pkg} || npm install -g #{pkg}"
     user "root"

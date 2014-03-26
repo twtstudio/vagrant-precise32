@@ -33,7 +33,7 @@ cookbook_file "/tmp/grants.sql" do
   owner "root"
   group "root"
   mode "0644"
-  notifies :run, 'execute[grant_mysql]'
+  notifies :run, 'execute[grant_mysql]', :immediately
 end
 
 execute "grant_mysql" do
