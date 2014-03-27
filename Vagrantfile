@@ -8,6 +8,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.box = "hashicorp/precise32"
   config.vm.box_url = "http://store-web.twtapps.net/precise32.box"
+  config.vm.box_download_checksum = "82507518dd38a507287f9703e5ffba30349b25f2"
+  config.vm.box_download_checksum_type = "sha1"
 
   config.vm.network "private_network", ip: "192.168.33.10"
 
