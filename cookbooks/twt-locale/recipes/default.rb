@@ -18,7 +18,7 @@ cookbook_file "/etc/default/locale" do
   mode "0644"
 end
 
-execute "Change locale to zh_CN.UTF-8" do
+execute "Generate Locale files" do
   command "locale-gen --purge"
   user "root"
   group "root"
