@@ -1,7 +1,7 @@
 apt_package "python-software-properties"
 
 execute "add ppa:chris-lea/node.js" do
-  command "test -f /etc/apt/sources.list.d/chris-lea-node_js-*.list || add-apt-repository -y ppa:chris-lea/node.js"
+  command "add-apt-repository -y ppa:chris-lea/node.js"
   user "root"
   group "root"
 end
