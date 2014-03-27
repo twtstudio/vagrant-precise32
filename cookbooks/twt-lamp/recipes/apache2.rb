@@ -15,6 +15,13 @@ execute 'a2enmod rewrite ssl' do
   group "root"
 end
 
+file "/etc/apache2/conf.d/disableSendfile" do
+  content "EnableSendfile off"
+  owner "root"
+  group "root"
+  mode "0644"
+end
+
 execute "make default site directory" do
   command "mkdir -p #{node[:twt_lamp][:docroot]} #{node[:twt_lamp][:logdir]}"
   user "vagrant"
