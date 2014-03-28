@@ -23,7 +23,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "twt-locale"
     chef.add_recipe "twt-apt-mirror"
     chef.add_recipe "twt-lamp"
-    #chef.add_recipe "twt-nodejs"
+    chef.add_recipe "twt-nodejs"
     chef.add_recipe "twt-ruby"
     chef.add_recipe "twt-git"
     chef.add_recipe "twt-vim"
